@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset div {
+            width: 100px; height:100px;
+            text-align:center; line-height: 100px;
+        }
+        .div1 {background-color: red;}
+        .div2 {background-color: blue;}
+        .div3 {background-color: green;}
+    </style>
+</head>
+<body>
+    <h2>block => inline으로 변경</h2>
+    <!-- 
+    div태그가 가진 block 속성을 완전히 파괴하여 width, height속성은
+    의미가 없어진다. 그리고 가로형으로 배치된다.
+    span과 같은 인라인 엘리먼트는 컨텐츠의 크기로 영역의 사이즈가 
+    결정되므로 width와 같은 속성을 부여할 수 없다.
+    -->
+    <style>
+        fieldest.inline div{
+            display: inline;
+        }
+    </style>
+    <fieldset class="inline">
+        <legend>가로형 배치로 변경하기</legend>
+        <div class="div1">left</div>
+        <div class="div2">center</div>
+        <div class="div3">right</div>
+    </fieldset>
+
+    <h2>block => inline-block으로 변경</h2>
+    <!-- 
+    block속성을 유지하면서 가로형으로 배치해야할때 사용하는 속성으로
+    레이아웃을 구성할때 매우 유용하게 사용된다. 즉 크기를 유지할 수
+    있는 div태그와 가로형배치가 되는 span태그의 역할을 동시에 수행한다.
+    -->
+    <style>
+        fieldest.inline_block div{
+            display: inline-block;
+        }
+    </style>
+    <fieldset class="inline_block">
+        <legend>가로형 배치로 변경하기</legend>
+        <div class="div1">left</div>
+        <div class="div2">center</div>
+        <div class="div3">right</div>
+    </fieldset>
+
+    <h2>inline => block 으로 변경</h2>
+    <!-- 
+    inline속성인 span태그가 block속성으로 변경되어 세로형 배치가된다.
+    span태그에 대해 사이즈로 지정한건 없으므로 박스형태로 출력되지는
+    않는다.
+    -->
+    <style>
+        fieldest.block span{
+            display: block;
+        }
+        /* 사이즈 추가하기 */
+        #spanLeft{
+            width: 150px; height:150px;
+        }
+    </style>
+    <fieldset class="block">
+        <legend>세로형 배치로 변경하기</legend>
+        <!-- block속성으로 변경되면 사이즈를 추가해서 박스형태로
+         만들 수 있다. -->
+        <div class="div1" id="spanLeft">left</div>
+        <div class="div2">center</div>
+        <div class="div3">right</div>
+    </fieldset>
+</body>
+</html>
