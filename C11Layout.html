@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+    /* 문서 전체의 div에 테두리를 지정하여 영역을 확인한다. */
+    /* div { border:1px solid red;} */
+    /* 좌측메뉴와 우측 컨텐츠 영역을 수평방향으로 정렬하기 위해 float속성을
+    사용하여 좌/우측으로 정렬한다. 단 이 경우 border가 적용된 상태이므로 100%를
+    조금 넘어가 컨텐츠 영역이 아래로 떨어진다. 이 경우 width의 %를 살짝 조정해
+    준다 */
+    /* .left_menu {width:29%; float:left;} */
+    /* .contents {float:right; width:69%;} */
+    /* 앞에서 사용한 float속성이 남아있는 경우 카피라이트 영역이 상단으로 파고
+    들어가기 때문에 clear를 통해 파괴해야한다. */
+    /* .copyright {clear:both;} */
+</style>
+<link rel="stylesheet" href="./style/div_layout.css">
+</head>
+<body>
+<div class="AllWarp">
+    <!-- 
+    GNB영역 : Global Navigation Bar. 일반적으로 상단 부분은 페이지를 이동하더라도
+        변하지 않는 메뉴로 구성된다. 즉 웹사이트 전체에서 사용할 수 있는 메뉴바
+        라는 뜻이다.
+    -->
+    <div class="header">
+        <div class="logo">
+            <img src="./images/seoul_logo.png" alt="서울특별시">
+        </div>
+        <div class="top_menu">
+            <ul>
+                <li><a href="http://tjoeun.co.kr"
+                    class="top_link">HOME</a></li>
+                <li><a href="#login" class="top_link">로그인</a></li>
+                <li><a href="#regist" class="top_link">회원가입</a></li>
+                <li><a href="#notice" class="top_link">공지사항</a></li>
+                <li><a href="#board" class="top_link">게시판</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="body">
+        <!-- 
+        LNB영역 : Local Navigation Bar . 주로 대메뉴에 따른 서브메뉴를 출력한다.
+            즉 특정 카테고리에 속하는 부분을 말한다.
+        -->
+        <div class="left_menu">
+            <ul>
+                <li><a href="#login" class="left_link">로긴</a></li>
+                <li><a href="#Regist" class="left">회원갑</a></li>
+                <li><a href="#Notice" class="left">공지글</a></li>
+                <li><a href="#Board" class="left">자유게시판</a></li>
+            </ul>
+        </div>
+        <!-- 컨텐츠 영역 : 해당 페이지에서 가장 핵심이 되는 내용을 출력 -->
+        <div class="contents">
+            <h2>로렘 입숨 함글</h2>
+            이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일<br>
+            전일까지로 한다. 국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로<br>
+            정한다. <br>
+            대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 <br>
+            국가를 보위하기 위하여 긴급한 조치가 필요하고 국회의 집회가 불가능한때 <br>
+            한하여 법률의 효력을 가지는 명령을 발할 수 있다. <br>
+        </div>
+    </div>
+    <hr>
+
+    <!-- 카피라이트 영역 : 주로 회사정보나 로고 등을 배치한다. -->
+    <div class="copyright">
+        <div class="copy_logo">
+            <img src="./images/seoul_copyright.png" alt="서울특별시">
+        </div>
+        <div class="copy_info">
+            서울특별시청 04524 서울특별시 중구 세종대로 110 <br>
+            대표전화: 02-120 또는 02-731-2120 (365일 24시간 운영/유료) <br>
+            @ Seoul Metropolitan Government all rights reserved
+        </div>
+    </div>
+</div>    
+</body>
+</html>

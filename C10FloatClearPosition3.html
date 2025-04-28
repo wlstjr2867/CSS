@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    /* 스티커처럼 상단에 box를 붙일때 사용한다. */
+    div.sticky {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0; padding: 10px; text-align: center;
+        background-color: #cae8ca;
+        border: 2px solid #4CAF50;
+    }
+    /* 
+    한국에서 주로 사용하는 크롬, 엣지와 외국에서 사용하는 오페라, 사파리 등의
+    웹 브라우저는 서로 사용하는 엔진이 달라 같은 CSS속성이라도 다르게 표현될
+    수 있다.
+    크로스 브라우징을 위해 몇가지 접두어가 존재하는데
+    -webkit- : 구글 크롬, 사파리 브라우저에 적용
+    -moz- : 파이어폭스에 적용
+    -ms- : 익스플로러, 현재는 거의 사용하지 않음
+    -o- : 오페라에 적용
+    */
+    </style>
+    <p>스티키 상단 영역</p>
+
+    <div class="sticky">sticky 박스</div>
+
+    <div>
+        <p>
+            이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일 
+전일까지로 한다. 국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로 
+정한다. 
+        </p>
+        <p style="margin-top: 1000px;">
+            대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 
+국가를 보위하기 위하여 긴급한 조치가 필요하고 국회의 집회가 불가능한 때에 
+한하여 법률의 효력을 가지는 명령을 발할 수 있다.
+        </p>
+    </div>
+
+    <style>
+    /* 
+    fixed 속성값은 웹브라우저의 특정 위치에 레이어를 고정하고 싶을때 사용한다.
+    해당 속성이 적용되면 스크롤에 영향을 받지 않는다. 단위 입력시 0인 경우에는
+    px를 생략할 수 있다.
+    */
+        div.fixed {
+            position: fixed;
+            /* 우측 하단에 고정한다. (fixed) */
+            bottom: 0; right: 0;
+            width: 100px; text-align: center;
+            height: 100px; line-height: 100px;
+            background-color: #cae8ca;
+            border: 2px solid #4CAF50;
+        }   
+        </style>
+        <div class="fixed">
+            fixed 박스
+        </div>
+
+        <br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* margin을 통해 블럭엘리먼트에 대해 가운데 정렬한다. */
+.content{
+    margin: 0 auto;
+    width: 80%;
+    color: yellow;
+}
+.content p{
+    width: 100%;
+    font-size: 1.5em;
+    border: 1px solid red;
+}
