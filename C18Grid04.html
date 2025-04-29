@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        grid-template-areas : 시각적으로 설계한 것처럼 레이아웃을 구성한다.
+            아래 설정만 보더라도 레이아웃 구조를 직관적으로 파악할 수 있다.
+            각 영역은 grid-area를 통해 설정하면 된다.
+        */
+        .container {
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "sidebar content"
+            "footer footer";
+            /* 수평방향으로는 1:3의 비율로 크키 설정 */
+            grid-template-columns: 1fr 3fr; 
+            /* 수직방향으로는 전체 3분할 되어 있음 */
+            grid-template-rows: auto 1fr auto; 
+            gap: 10px;
+        }
+        /* 각 항목의 이름은 grid-area에 지정한다. */
+        .header {
+            grid-area: header;background-color: #673AB7;
+        }
+        .sidebar {
+            grid-area: sidebar;background-color: #009688;
+        }
+        .content {
+            grid-area: content;background-color: #FFC107;
+        }
+        .footer {
+            grid-area: footer;background-color: #795548;
+        }
+        .container > div {
+            color: white;font-size: 24px;text-align: center;padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>grid-시각적 설계</h2>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

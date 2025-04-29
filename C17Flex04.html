@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        아이템이 많을 때 자동 줄바꿈을 설정하고, 줄간 정렬을 제어할 수 있다.
+        flex-wrap : warp을 사용하면 아이템이 한 줄에 들어가지 않는 경우 자동으로
+            다음줄로 이동시켜준다.
+        align-content : 아이템이 두줄 이상일때 교차 축 방향의 정렬을 설정한다.
+            (※두줄 이상이 아니라면 효과 없음)
+            flex-start : 위쪽 정렬
+            flex-end : 아래쪽 정렬
+            center : 중앙 정렬
+            space-between : 첫줄과 마지막줄은 컨테이너 끝으로 정렬된 후 나머지는
+                균등하게 배치됨
+            space-around : 중앙에 정렬되지만, 줄 사이에 여백이 생김
+            stretch : 디폴트값으로 전체 높이를 채우도록 줄 높이를 늘림
+        */
+        .container {
+        display: flex; 
+        /* 줄바꿈을 허용. 이 속성을 지우면 브라우저를 줄여도 줄바꿈이 되지 않는다.  */
+        flex-wrap: wrap;
+        /* 아이템이 2줄 이상이 되었을때의 정렬 방식 지정 */
+        align-content: center; 
+        border: 2px solid #333; padding: 10px;
+        height: 300px;
+    }
+    .item {
+        width: 100px; line-height: 60px;
+        background-color: lightcoral;
+        margin: 5px; text-align: center;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <h2>Flexbox-여러줄 처리</h2>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

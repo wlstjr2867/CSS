@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>테이블1 - HTML속성</h2>
+    <table id="table1" border="0" cellspacing="1" cellpadding="5"
+    width="400" bgcolor="gray">
+        <tr bgcolor="silver">
+            <th>이름</th>
+            <th>나이</th>
+            <th>몸무게</th>
+        </tr>
+        <tr bgcolor="white">
+            <th>이순신</th>
+            <th>30세</th>
+            <th>77kg</th>
+        </tr>
+        <tr bgcolor="white">
+            <th>홍길동</th>
+            <th>25세</th>
+            <th>65kg</th>
+        </tr>
+    </table>
+
+    <h2>테이블2 - CSS속성</h2>
+    <style>
+    #table2{
+        width: 400px;
+        border: 1px solid gray;
+        /* border-collapse: collapse; */
+        border-collapse: separate;
+    }
+    #table2 th{
+        background-color: silver;
+    }
+    #table2 th, #table2 td{
+        border: 1px solid gray;
+        padding: 5px;
+    }
+    </style>
+    <table id="table2">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>몸무게</th>
+        </tr>
+        <tr>
+            <th>이순신</th>
+            <th>30세</th>
+            <th>77kg</th>
+        </tr>
+        <tr>
+            <th>홍길동</th>
+            <th>25세</th>
+            <th>65kg</th>
+        </tr>
+    </table>
+</body>
+</html>
