@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <style>
+        /* 계산기의 배경과 테두리 부분 */
+        table{
+            background-color:#dddddd;
+            border-radius:10px; border:1px solid #c7c7c7;
+        }
+        /* 버튼의 공통 스타일 지정. 폰트의 색깔, 크기, 테두리 등 */
+        input, button {
+            color:white; height:50px; font-size:1.5em;
+            border-radius:10px; border:1px solid #dddddd;
+        }
+        /* 각 버튼의 스타일 지정 */
+        .key_type1{
+            background-color:#7b7b7b; width:204px; 
+        }
+        .key_type1:hover{
+            background-color:#444444; cursor:pointer;
+        }
+        .key_type2{
+            background-color:#373737; width:100px;
+        }
+        .key_type2:hover{
+            background-color:#909090; cursor:pointer;
+        }        
+        .key_type3{
+            background-color:#fa960a; width:100px;
+        }
+        .key_type3:hover{
+            background-color:#ffcd88; cursor:pointer;
+        }
+        /* 디스플레이 창. 텍스트는 오른쪽으로 정렬하고 배경색은 연두색
+        계열로 설정한다. */
+        #lcd{
+            background-color:#70c738; font-size:40px;
+            border-radius:10px; text-align:right; padding:10px;
+            font-weight:bold;
+        }
+    </style>
+    <script>
+    function clearBtn(){
+        // alert("버튼 클릭");
+        console.log("버튼 클릭");
+
+        /* 해당 문서에 lcd 아이디 속성값을 가진 엘리먼트를 가져와서
+        태그와 태그사이에 0을 입력한다. */
+        document.getElementById("lcd").innerText = "0";
+    }
+    </script>
+</head>
+<body>
+<h2>계산기 만들기</h2>
+<table>
+    <!-- LCD(디스플레이) 창 -->
+    <tr>
+        <td colspan="4">
+            <!-- 정해진 크기를 넘어가는 경우 overflow속성으로 텍스를 
+            숨김처리 한다. 이렇게 하면 데이터는 유지되고 레이아웃은
+            깨지지 않는다.  -->
+            <div style="width:410px; overflow:hidden;">
+                <div id="lcd">123+456123+456123+456123+456123+456123+456</div>
+            </div>
+        </td>
+    </tr>
+    <!-- Backspace, Clear 버튼 -->
+    <tr>
+        <td colspan="2">
+            <button type="button" class="key_type1">Backspace</button>
+        </td>
+        <td colspan="2">
+            <button type="button" class="key_type1" 
+                onclick="clearBtn();">C</button>
+        </td>
+    </tr>
+    <!-- 숫자 버튼 및 연산 버튼  -->
+    <tr>
+        <td><input type="button" value="1" class="key_type2"></td>
+        <td><input type="button" value="2" class="key_type2"></td>
+        <td><input type="button" value="3" class="key_type2"></td>
+        <td><input type="button" value="+" class="key_type3"></td>
+    </tr>
+</table>
+</body>
+</html>

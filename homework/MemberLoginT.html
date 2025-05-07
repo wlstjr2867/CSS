@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    fieldset#login_container{
+        border:0px;
+        padding:50px;
+    }
+    /* 아이디, 패스워드 입력 상자 스타일 지정 */
+    .user_input{
+        border: 1px solid gray; width:320px; height:27px;
+        padding:10px; font-size:18px;
+    }
+    table#login_box{
+        margin:0 auto;
+        border:3px solid silver;
+        padding:20px;
+    }
+    table#login_box td{
+        padding:10px; border:0px solid silver;
+    }
+    </style>
+</head>
+<body>
+<fieldset id="login_container">
+    <table border="0" id="login_box">
+        <colgroup>
+            <col width="">
+            <col width="">
+        </colgroup>
+        <tr>
+            <td colspan="2" align="center"><img src="./images/login_logo.gif" alt=""></td>
+        </tr>
+        <!-- 아이디 입력상자 -->
+        <tr>
+            <td align="right"><input type="text" name="user_id" placeholder="아이디" class="user_input" tabindex="1"></td>
+            <td rowspan="2"><input type="image" src="./images/login_bt.gif" alt="로그인버튼" tabindex="3"></td>
+        </tr>
+        <!-- 패스워드 입력상자 -->
+        <tr>
+            <td align="right"><input type="password" name="user_pw" placeholder="****" class="user_input" tabindex="2"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <img src="./images/login_member.gif" alt="회원가입">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="./images/login_idpw.gif" alt="아이디/비번찾기">
+            </td>
+        </tr>
+    </table>
+</fieldset>
+</body>
+</html>

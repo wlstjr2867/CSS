@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemberRegist.html</title>
+    <style>
+    /* 전체선택자를 통해 문서의 기본 스타일을 설정한다. 
+    margin 속성으로 문서의 컨텐츠를 가운데 정렬할 수 있다. */
+    *{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size:12px; margin: 0px auto;
+    }
+    form{
+        margin-top:30px; 
+    }
+    input, select, button {
+        border: 1px solid #afafaf;
+    }
+    .userTable{
+        border:1px solid silver; width:670px;
+        border-collapse:collapse;
+    }
+    .userTable td{
+        padding:10px; border:1px solid #b9babb;
+    }
+    .userTable td.userTit{
+        background-color:#e4e6e9; font-weight:bold;
+    }
+    .info{ 
+        color:red;
+    }
+    .btn_search{
+        background-color:#3d3d3d; color:#ffffff;
+    }
+    .btn_search:hover{
+        background-color:#6d6d6d; cursor:pointer;
+    }
+    .w20{width:20px;}
+    .w40{width:40px;}
+    .w100{width:100px;}
+    .w200{width:200px;}
+    #btn_area{
+        text-align:center; margin-top:30px;
+    }
+    .btn_submit{
+        width:120px; height:28px; font-weight:bold;
+        cursor:pointer; background-color:#e70e16;
+        color:white; font-size:1.2em;
+    }
+    .btn_submit:hover{        
+        background-color:#ffb1b4;
+        color:black;
+    }
+    .btn_reset{
+        width:120px; height:28px; font-weight:bold;
+        cursor:pointer; background-color:#797979;
+        color:white; font-size:1.2em;
+    }
+    .btn_reset:hover{
+        background-color:#d0d0d0;
+        color:black;
+    }  
+
+    body > form > table > tbody > tr:nth-child(2) > td.userTit{
+        padding-left:22px;
+    }
+    </style>
+</head>
+<body>
+<form name="registForm" action="regist.jsp" method="post">
+<table class="userTable">
+    <colgroup>
+        <col width="130px">
+        <col width="540px">
+    </colgroup>
+    <tr>
+        <td class="userTit"><span class="info">*</span> 아이디</td>
+        <td class="userCon">
+            <input type="text" name="id" value="" class="w200">
+            <input type="button" value="중복확인" class="btn_search">
+            + 4~15자, 첫 영문자, 영문과 숫자의 조합
+        </td>
+    </tr>
+    <tr>
+        <td class="userTit" style="padding-left:22px;"> 생년월일</td>
+        <td class="userCon">
+            <label>
+                <input type="radio" name="gender" value="male">
+                남자
+            </label>
+            &nbsp;&nbsp;
+            <input type="radio" name="gender" id="women" value="female">
+            <label for="women">여자</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="birthY" class="w40">년
+            <input type="text" name="birthM" class="w20">월
+            <input type="text" name="birthD" class="w20">일
+        </td>
+    </tr>
+    <tr>
+        <td class="userTit" style="padding-left:22px;"> 이메일</td>
+        <td class="userCon">
+            <input type="text" name="email01">
+            @
+            <input type="text" name="email02" list="email_domain"><br>
+            <datalist id="email_domain">
+                <option value="naver.com">
+                <option value="daum.net">
+                <option value="gmail.com">
+            </datalist>
+        </td>
+    </tr>
+</table>
+<div id="btn_area">
+    <input type="submit" value="등록하기" class="btn_submit">
+    <input type="reset" value="새로쓰기" class="btn_reset">
+</div>
+</form>
+<br><br><br><br><br><br><br><br>
+</body>
+</html>
